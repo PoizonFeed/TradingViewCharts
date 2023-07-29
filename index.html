@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TradingView Charts</title>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Add CSS to the head section for styling */
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .widget {
+            flex: 1;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+     <!-- Additional Widget -->
+     <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+                {
+                "description": "USD/KZT",
+                "proName": "FX_IDC:USDKZT"
+                },
+                {
+                "description": "S&P 500",
+                "proName": "SP:SPX"
+                },
+                {
+                "description": "CRYPTOCAP",
+                "proName": "CRYPTOCAP:TOTAL"
+                },
+                {
+                "description": "BTCUSD",
+                "proName": "CRYPTO:BTCUSD"
+                },
+                {
+                "description": "ETHUSD",
+                "proName": "CRYPTO:ETHUSD"
+                },
+                {
+                "description": "BNBUSD",
+                "proName": "CRYPTO:BNBUSD"
+                },
+                {
+                "description": "USDTUSD",
+                "proName": "CRYPTO:USDTUSD"
+                }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "ru"
+            }
+        </script>
+    </div>
+    <!-- End of Additional Widget -->
+    <div id="container">
+        <div id="widget1" style="float:left;width:50%;height:47vh;"></div>
+        <div id="widget2" style="float:right;width:50%;height:47vh"></div>
+        <div id="widget3" style="float:right;width:50%;height:47vh"></div>
+        <div id="widget4" style="float:left;width:50%;height:47vh"></div>
+    </div>
+    <script type="text/javascript">
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "BYBIT:BTCUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "ru",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "details": false,
+            "container_id": "widget1"
+        });
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "BYBIT:ETHUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "ru",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "details": false,
+            "container_id": "widget2"
+        });  
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "BYBIT:LTCUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "ru",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "details": false,
+            "container_id": "widget3"
+        });
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "BYBIT:BCHUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "ru",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "details": false,
+            "container_id": "widget4"
+        });
+    </script>    
+</body>
+</html>
